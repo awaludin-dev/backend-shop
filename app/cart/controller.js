@@ -13,8 +13,8 @@ const update = async (req, res, next) => {
                 price: relatedProduct.price,
                 image_url: relatedProduct.image_url,
                 name: relatedProduct.name,
-                user: relatedProduct.user,
-                qty: relatedProduct.qty,
+                user: req.user._id,
+                qty: item.qty,
             }
         });
 
